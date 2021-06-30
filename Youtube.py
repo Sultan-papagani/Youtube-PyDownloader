@@ -67,7 +67,13 @@ def main():
     final = base + "FINAL" + ext
     final = final.replace(" ", "")
     #ffmpeg
-    os.system(f"ffmpeg -i {fflist[0]} -i {fflist[1]} -c:v copy -c:a aac {final}")
+    print("ffmpeg işlemi için devam ? (y/n)")
+    answer = input()
+    try:
+        if answer == "y":
+            os.system(f"ffmpeg -i {fflist[0]} -i {fflist[1]} -c:v copy -c:a aac {final}")
+    except:
+        print("son.")
         
     
     
