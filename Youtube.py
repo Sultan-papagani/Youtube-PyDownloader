@@ -2,11 +2,11 @@
 
 from pytube import YouTube
 import os
-from time import sleep
+#from time import sleep
 
-def err(str):
+"""def err(str):
     print(str)
-    exit()
+    exit()"""
 
 def main():
     vids = []
