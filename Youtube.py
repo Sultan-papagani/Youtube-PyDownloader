@@ -2,11 +2,9 @@
 
 from pytube import YouTube
 import os
-#from time import sleep
 
-"""def err(str):
-    print(str)
-    exit()"""
+
+chan = ["/", "\", "(", ")", "&", "%", "-", "-", "*", " ", "$", "!"]
 
 def main():
     vids = []
@@ -47,6 +45,7 @@ def main():
         vids.append(data)
         print(str(i)+"- " + "None" + "\t" + "None" + " \t" + data.mime_type + "\t" + data.type + "\t" + data.abr + "\t" + str(data.itag))
         i += 1
+    print("")
     print("indirilecekleri seçin (boşluksuz, virgül olmadan):")
     print("0 ve 4 indirmek için = '04' yazın")
     xc = input()
@@ -59,13 +58,15 @@ def main():
             ax = vids[int(data)].download()
             base, ext = os.path.splitext(ax)
             new_name = base + str(data) + ext
-            new_name = new_name.replace(" ", "")
+            for d in chan:
+                new_name = new_name.replace(d, "")
             os.rename(ax, new_name)
             fflist.append(new_name)
         except:
             print("error")
     final = base + "FINAL" + ext
-    final = final.replace(" ", "")
+    for d in chan:
+        final = final.replace(d, "")
     #ffmpeg
     print("ffmpeg işlemi için devam ? (y/n)")
     answer = input()
