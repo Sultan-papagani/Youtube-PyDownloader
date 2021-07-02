@@ -4,7 +4,7 @@ from pytube import YouTube
 import os
 
 
-chan = ["/", "\", "(", ")", "&", "%", "-", "-", "*", " ", "$", "!"]
+chan = ['/', '&', '%', '-', '-', '*', ' ', '$', '!']
 
 def main():
     vids = []
