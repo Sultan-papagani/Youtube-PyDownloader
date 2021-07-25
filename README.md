@@ -1,4 +1,7 @@
 # Youtube-PyDownloader
+
+[not: pytube çalışmıyor onun yerine (c#) YoutubeExplode falan kullanın, pytube sürekli bozuluyor :/]
+
 /
 bu kütüphane genel kullanım için değildir
 bi işinize yaramaz yani
